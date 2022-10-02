@@ -4,7 +4,7 @@ This is a full-stack app designed for creativity.
 
 An excellent tool for musicians, songwriters, composers, and anyone interested in writing songs and having a place to keep them stored, whilst getting words and chords recommendations to make it a hit.
 
-**Live site URL:**  
+**Live site URL:**  [Here](https://nerd-songwriter.vercel.app)
 
 ![App Screenshot](./screenshot.png)
 
