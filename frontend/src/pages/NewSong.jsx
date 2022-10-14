@@ -19,7 +19,7 @@ const NewSong = () => {
 
   useEffect(() => {
     const fetchSong = async () => {
-      const response = await fetch(`/api/songs/${id}`, {
+      const response = await fetch(`https://nerd-songwriter-api.fly.dev/api/songs/${id}`, {
         headers: {'Authorization': `Bearer ${user.token}`},
       })
       const json = await response.json()
@@ -39,7 +39,7 @@ const NewSong = () => {
 
     const song = {title, lyrics}
 
-    const response = await fetch(`/api/songs/${id}`, {
+    const response = await fetch(`https://nerd-songwriter-api.fly.dev/api/songs/${id}`, {
       method: 'PUT',
       body: JSON.stringify(song),
       headers: {
@@ -63,14 +63,7 @@ const NewSong = () => {
 
   return (
     <div className="home newSong__component">
-      <section className="tools">
-        <div className="words">
-          <WordSearch />
-        </div>
-        <div className="chords">
-          <ChordSearch />
-        </div>
-      </section>
+        <h2>Song Details</h2>
       <section className='songs-container'>
         <input 
           name='title' 
@@ -91,6 +84,14 @@ const NewSong = () => {
         />
         <button className='btn btn-save' onClick={saveSong}>Save</button>
         {error && <div className="error">{error}</div>}
+      </section>
+      <section className="tools">
+        <div className="words">
+          <WordSearch />
+        </div>
+        <div className="chords">
+          <ChordSearch />
+        </div>
       </section>
     </div>
   )
